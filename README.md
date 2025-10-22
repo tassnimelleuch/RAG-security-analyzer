@@ -23,12 +23,12 @@ $env:GROQ_API_KEY="your_key_here"    # For Windows PowerShell
 
 3. Run the analyzer:
 ```bash
-python detect_malicious_login.py
+python rag_pipeline.py
 ```
 
 ## Testing
 To verify LLM integration:
 ```bash
 $env:GROQ_NONCE_TEST="1"
-python detect_malicious_login.py
+python test_multi.py
 ```
