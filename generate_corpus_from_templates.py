@@ -3,6 +3,11 @@
 import json
 from pathlib import Path
 import random
+import faiss
+import numpy
+import requests
+import torch
+import transformers
 
 OUT = Path("prepared/corpus_passages.json")
 OUT.parent.mkdir(parents=True, exist_ok=True)
