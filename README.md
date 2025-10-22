@@ -1,11 +1,34 @@
-# 🛡️ Cyber AI Detection - Multi-Attack Security Analyzer
+# RAG Security Analyzer
 
-AI-powered security threat detection using RAG (Retrieval-Augmented Generation) and FAISS vector database.
+A security analysis system using RAG (Retrieval Augmented Generation) to detect malicious login attempts.
 
-## 🚀 Features
+## Features
+- FAISS vector database for semantic search
+- Groq LLM integration for analysis
+- Pre-built security pattern corpus
+- Real-time login event analysis
 
-- **8+ Attack Types Detection**: Brute Force, Credential Stuffing, Password Spraying, etc.
-- **RAG Pipeline**: FAISS + LLM integration for intelligent threat analysis
-- **Real-time Monitoring**: MongoDB-ready event processing
-- **High Accuracy**: 94% detection rate on test scenarios
+## Setup
+1. Install requirements:
+```bash
+pip install -r requirements.txt
+```
 
+2. Set environment variables:
+```bash
+export GROQ_API_KEY="your_key_here"  # For Linux/Mac
+# or
+$env:GROQ_API_KEY="your_key_here"    # For Windows PowerShell
+```
+
+3. Run the analyzer:
+```bash
+python detect_malicious_login.py
+```
+
+## Testing
+To verify LLM integration:
+```bash
+$env:GROQ_NONCE_TEST="1"
+python detect_malicious_login.py
+```
